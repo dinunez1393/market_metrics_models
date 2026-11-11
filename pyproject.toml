@@ -1,0 +1,20 @@
+[project]
+name = "market-metrics-models"
+version = "0.1.0"
+description = "Program to build DB schema on first run and to serve as package library for the schema models. Program is meant for stock market data."
+authors = [
+    { name = "DiegoNunez", email = "dinunez93@outlook.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.20.1",
+    "python-dotenv>=1.2.4",
+    "sqlalchemy>=2.1.6",
+]
+
+[project.scripts]
+market-metrics-models = "market_metrics_models:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
