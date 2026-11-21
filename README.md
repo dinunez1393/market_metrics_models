@@ -9,6 +9,7 @@ Remove-Item -Recurse -Force ".\.venv\Lib\site-packages\market_metrics_allocator-
 
 uv add pandas
 uv sync (install all dependencies in pyproject.toml)
+uv sync --upgrade-package market-metrics-models (to upgrade a package, like a custom package living in github)
 uv add git+https://github.com/dinunez1393/market_metrics_models.git (install from github repo)
 
 Generate a new python project with standard layour: src/project_name (pkh):
