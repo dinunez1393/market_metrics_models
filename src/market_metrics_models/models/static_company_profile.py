@@ -25,4 +25,4 @@ class StaticCompanyProfile(Base, BaseModelMixin):
     market: Mapped["Market"] = relationship(back_populates='company_profiles')
 
     # One-to-Many relationship - This is: Parent table
-    companies: Mapped["list[CompanyData]"] = relationship(back_populates='company_profile')
+    companies: Mapped[list["CompanyData"]] = relationship(back_populates='company_profile')

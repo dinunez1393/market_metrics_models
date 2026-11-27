@@ -8,4 +8,4 @@ class Currency(Base, BaseModelMixin):
     currency: Mapped[str]
 
     # One-to-Many - This is: Parent table
-    company_profiles: Mapped["list[StaticCompanyProfile]"] = relationship(back_populates="currency")
+    company_profiles: Mapped[list["StaticCompanyProfile"]] = relationship(back_populates="currency")

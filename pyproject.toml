@@ -1,6 +1,6 @@
 [project]
 name = "market-metrics-models"
-version = "0.2.0"
+version = "0.2.1"
 description = "Program to build DB schema on first run and to serve as package library for the schema models. Program is meant for stock market data."
 authors = [
     { name = "DiegoNunez", email = "dinunez93@outlook.com" }

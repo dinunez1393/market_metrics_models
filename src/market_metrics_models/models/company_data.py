@@ -24,12 +24,12 @@ class CompanyData(Base, BaseModelMixin):
     company_profile: Mapped["StaticCompanyProfile"] = relationship(back_populates='companies')
 
     # Many-to-Many relationships: links to 'FundamentalMetric' via the junction table 'company_metric_junction'
-    fundamental_metrics: Mapped["list[FundamentalMetric]"] = relationship(
+    fundamental_metrics: Mapped[list["FundamentalMetric"]] = relationship(
         secondary="company_metric_junction",
         back_populates='companies',
     )
     # links to 'Ranking' via the junction table 'company_ranking_junction'
-    rankings: Mapped["list[Ranking]"] = relationship(
+    rankings: Mapped[list["Ranking"]] = relationship(
         secondary="company_ranking_junction",
         back_populates='companies',
     )

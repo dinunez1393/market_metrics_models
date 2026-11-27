@@ -8,4 +8,4 @@ class Market(Base, BaseModelMixin):
     market: Mapped[str]
 
     # One-to-many relationship - This is: Parent table
-    company_profiles: Mapped["list[StaticCompanyProfile]"] = relationship(back_populates="market")
+    company_profiles: Mapped[list["StaticCompanyProfile"]] = relationship(back_populates="market")

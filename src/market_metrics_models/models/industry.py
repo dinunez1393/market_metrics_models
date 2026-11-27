@@ -13,4 +13,4 @@ class Industry(Base, BaseModelMixin):
     sector: Mapped["Sector"] = relationship(back_populates='industries')
 
     # One-to-many relationship - This is: Parent table
-    company_profiles: Mapped["list[StaticCompanyProfile]"] = relationship(back_populates="industry")
+    company_profiles: Mapped[list["StaticCompanyProfile"]] = relationship(back_populates="industry")

@@ -15,7 +15,7 @@ class Ranking(Base, BaseModelMixin):
     metric: Mapped["DistinctMetric"] = relationship(back_populates='rankings')
 
     # Many-to-Many relationship: links to 'Company' via the junction table 'company_ranking_junction'
-    companies: Mapped["list[CompanyData]"] = relationship(
+    companies: Mapped[list["CompanyData"]] = relationship(
         secondary="company_ranking_junction",
         back_populates='rankings',
     )

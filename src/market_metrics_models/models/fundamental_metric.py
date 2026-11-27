@@ -11,7 +11,7 @@ class FundamentalMetric(Base, BaseModelMixin):
     metric: Mapped["DistinctMetric"] = relationship(back_populates='fundamental_metrics')
 
     # Many-to-Many relationship: links to 'Company' via the junction table 'company_metric_junction'
-    companies: Mapped["list[CompanyData]"] = relationship(
+    companies: Mapped[list["CompanyData"]] = relationship(
         secondary="company_metric_junction",
         back_populates='fundamental_metrics',
     )

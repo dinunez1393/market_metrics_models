@@ -8,4 +8,4 @@ class Country(Base, BaseModelMixin):
     country: Mapped[str]
 
     # One-to-many relationship - This is: Parent table
-    company_profiles: Mapped["list[StaticCompanyProfile]"] = relationship(back_populates="country")
+    company_profiles: Mapped[list["StaticCompanyProfile"]] = relationship(back_populates="country")

@@ -8,4 +8,4 @@ class Sector(Base, BaseModelMixin):
     sector: Mapped[str]
 
     # One-to-many - This is: Parent table
-    industries: Mapped["list[Industry]"] = relationship(back_populates="sector")
+    industries: Mapped[list["Industry"]] = relationship(back_populates="sector")
